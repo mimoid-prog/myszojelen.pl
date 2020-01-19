@@ -5,5 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `myszojelen.pl - strona poświęcona cudownemu zwierzęciu o nazwie Myszojeleń`,
+    siteUrl: `http://myszojelen.pl`,
+    description: `Naukowcy myśleli że wszystkie Myszojelenie dawno już wyginęły. Byli jednak w błędzie, ponieważ Myszojeleń żyje!`,
+  },
+  plugins: ["gatsby-plugin-sass"],
 }

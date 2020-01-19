@@ -1,0 +1,46 @@
+.videoSection {
+  background: #212121;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+
+  a {
+    color: #ffd594;
+  }
+}
+
+.videoContainer {
+  margin-top: 20px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  width: 100%;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1000px) {
+  .videoSection {
+    padding: 100px;
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+
+  .videoContainer {
+    width: 70%;
+    display: block;
+    margin: 20px auto 0;
+  }
+}
