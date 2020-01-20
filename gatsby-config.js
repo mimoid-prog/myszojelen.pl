@@ -7,8 +7,18 @@
 module.exports = {
   siteMetadata: {
     title: `myszojelen.pl - strona poświęcona cudownemu zwierzęciu o nazwie Myszojeleń`,
-    siteUrl: `http://myszojelen.pl`,
-    description: `Naukowcy myśleli że wszystkie Myszojelenie dawno już wyginęły. Byli jednak w błędzie, ponieważ Myszojeleń żyje!`,
+    siteUrl: `https://myszojelen.pl`,
+    description: `Naukowcy myśleli że wszystkie gatunek Myszojelenia już dawno wyginął. Byli jednak w błędzie, ponieważ Myszojelenie żyją!`,
   },
-  plugins: ["gatsby-plugin-sass"],
+  plugins: [
+    "gatsby-plugin-sass",
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-156522420-1",
+        head: true,
+      },
+    },
+  ],
 }
