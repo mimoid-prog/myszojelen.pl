@@ -1,5 +1,5 @@
 import React from "react"
-import videoSectionStyles from "./videoSection.module.scss"
+import videoSectionStyles from "../../styles/videoSection.module.scss"
 
 const VideoSection = () => {
   return (
@@ -22,9 +22,10 @@ const VideoSection = () => {
             width="560"
             height="315"
             src="https://www.youtube.com/embed/92p6kervcak"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
+            title="myszojelen"
           ></iframe>
         </div>
       </div>

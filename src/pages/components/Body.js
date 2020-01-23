@@ -1,7 +1,7 @@
 import React from "react"
-import bodyStyles from "./body.module.scss"
-import m1 from "../../../images/m1shaped.png"
-import m4 from "../../../images/m4shaped.png"
+import bodyStyles from "../../styles/body.module.scss"
+import m1 from "../../images/m1shaped.png"
+import m4 from "../../images/m4shaped.png"
 
 const Body = () => {
   return (

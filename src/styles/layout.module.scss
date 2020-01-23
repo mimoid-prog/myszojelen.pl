@@ -1,6 +1,8 @@
+@import "./colors.scss";
+
 .layout {
-  background: #2b2b2b;
-  border: 30px solid #ec8323;
+  background: $gray;
+  border: 30px solid $orange;
   color: white;
   padding: 20px;
   min-height: 100vh;
@@ -9,6 +11,6 @@
 
 @media (max-width: 700px) {
   .layout {
-    border: 20px solid #ec8323;
+    border: 20px solid $orange;
   }
 }

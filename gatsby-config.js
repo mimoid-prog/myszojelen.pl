@@ -3,6 +3,11 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+//"start": "npm run develop",
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   siteMetadata: {
@@ -20,5 +25,24 @@ module.exports = {
         head: true,
       },
     },
+    {
+      resolve: `gatsby-source-mongodb`,
+      options: {
+        dbName: process.env.DBNAME,
+        collection: "comments",
+        server: {
+          address: process.env.HOST,
+          port: process.env.PORT,
+        },
+        auth: {
+          user: process.env.USER,
+          password: process.env.PASSWORD,
+        },
+      },
+    },
   ],
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:5000",
+  },
 }

@@ -1,8 +1,8 @@
 import React from "react"
-import Layout from "./components/layouts/Layout"
-import Header from "./components/header/Header"
-import Body from "./components/body/Body"
-import VideoSection from "./components/videoSection/VideoSection"
+import Layout from "./layouts/Layout"
+import Header from "./components/Header"
+import Body from "./components/Body"
+import VideoSection from "./components/VideoSection"
 import { Helmet } from "react-helmet"
 
 const Home = () => {

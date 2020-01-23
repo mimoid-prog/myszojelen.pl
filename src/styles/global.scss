@@ -3,11 +3,16 @@
   src: url("../fonts/Flabby_Bums_handwriting.ttf");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
 h3,
-p {
+p,
+button {
   margin: 0;
   padding: 0;
   font-family: Flabby;
@@ -19,6 +24,11 @@ img {
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 @media (min-width: 700px) {

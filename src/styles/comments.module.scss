@@ -1,0 +1,94 @@
+@import "./colors.scss";
+
+.commentsPage h2 {
+  margin-top: 20px;
+  color: $yellow;
+}
+
+.form {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 1.6rem;
+  }
+
+  input,
+  textarea {
+    background: transparent;
+    outline: none;
+    border: 2px solid white;
+    margin-top: 10px !important;
+    color: white;
+    font-family: Flabby;
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    height: 20vh;
+  }
+
+  .submit {
+    width: 200px;
+    background: $yellow;
+    border: none;
+    color: $darkGray;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin: 15px auto 0;
+
+    &:hover {
+      background-color: #ffcf94;
+    }
+  }
+
+  .message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .success {
+    color: #aff5a2;
+  }
+
+  .fail {
+    color: #f74f4f;
+  }
+}
+
+.comments {
+  ul {
+    max-height: 50vh;
+    overflow-y: scroll;
+  }
+
+  li {
+    background: $darkGray;
+    padding: 6px;
+    margin-bottom: 1px;
+
+    .nick {
+      color: $yellow;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .commentsPage {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .commentsPage {
+    width: 45%;
+  }
+}

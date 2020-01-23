@@ -1,0 +1,96 @@
+@import "./colors.scss";
+
+.header ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 20px 0 0;
+
+  a {
+    color: white;
+    padding: 5px 10px;
+    font-size: 1.4rem;
+    transition: all ease 0.1s;
+    display: flex;
+    border-bottom: 3px solid $yellow;
+
+    img {
+      width: 28px;
+      margin-left: 10px;
+      transition: all ease 0.1s;
+    }
+
+    &:hover {
+      color: #ffefdb;
+
+      img {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+
+  a {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    transition: 0.2s ease all;
+    cursor: pointer;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .logo-box {
+    h1 {
+      font-size: 4rem;
+
+      &:hover {
+        font-size: 4.7rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .logo-box {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .logo-box {
+    h1 {
+      font-size: 6rem;
+
+      &:hover {
+        font-size: 6.7rem;
+      }
+    }
+  }
+}
