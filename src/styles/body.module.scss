@@ -1,7 +1,3 @@
-.bodyContainer {
-  padding: 40px 0;
-}
-
 .body {
   display: flex;
   flex-direction: column;
@@ -28,10 +24,6 @@
 }
 
 @media (min-width: 1000px) {
-  .bodyContainer {
-    padding: 100px 60px;
-  }
-
   .body {
     flex-direction: row;
     justify-content: space-between;

@@ -3,6 +3,8 @@
   src: url("../fonts/Flabby_Bums_handwriting.ttf");
 }
 
+@import "./colors.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -31,9 +33,25 @@ ul {
   padding: 0;
 }
 
+.page-title {
+  margin-top: 20px;
+  color: $yellow;
+  text-align: center;
+}
+
+.bodyContainer {
+  padding: 40px 0;
+}
+
 @media (min-width: 700px) {
   .container {
     max-width: 80%;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .bodyContainer {
+    padding: 100px 60px;
   }
 }

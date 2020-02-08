@@ -15,6 +15,7 @@ const Home = () => {
           content="Jeśli jesteś fanem Myszojelenia i chcesz pooglądać jego słodki pyszczek oraz pośpiewać o nim piosenkę to zobacz tę stronę."
         />
         <meta name="robots" content="index, follow" />
+        <link rel="shortcut icon" href="../favicon.jpg"></link>
       </Helmet>
       <Header />
       <Body />

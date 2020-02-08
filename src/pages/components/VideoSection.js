@@ -9,7 +9,6 @@ const VideoSection = () => {
         <a
           href="https://www.youtube.com/watch?v=92p6kervcak"
           target="_blank"
-          without
           rel="noopener noreferrer"
         >
           Luizy Kukulińskiej

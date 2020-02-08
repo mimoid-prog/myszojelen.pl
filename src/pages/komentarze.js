@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import style from "../styles/comments.module.scss"
 import Layout from "./layouts/Layout"
 import Header from "./components/Header"
 import { Helmet } from "react-helmet"
-import img from "../images/menu-item.png"
 import { graphql, useStaticQuery } from "gatsby"
 import axios from "axios"
 
@@ -22,12 +21,8 @@ const Comments = () => {
     }
   `)
 
-  const [reversed, setReversed] = useState(false)
   let comments = data.allMongodbMo1087CnsComments.edges
-  if (reversed === false) {
-    comments = data.allMongodbMo1087CnsComments.edges.reverse()
-    setReversed(true)
-  }
+  if (comments[0].node.nick === "Grzeg") comments.reverse()
 
   const [name, setName] = useState("")
   const [comment, setComment] = useState("")
@@ -85,7 +80,7 @@ const Comments = () => {
       </Helmet>
       <Header />
       <div className={style.commentsPage}>
-        <h2>
+        <h2 className="page-title">
           Napisz co sądzisz o Myszojeleniu (mam nadzieję, że nic brzydkiego!)
         </h2>
         <form className={style.form}>

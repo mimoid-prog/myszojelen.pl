@@ -5,7 +5,7 @@ import m4 from "../../images/m4shaped.png"
 
 const Body = () => {
   return (
-    <div className={`${bodyStyles.bodyContainer} container`}>
+    <div className={`bodyContainer container`}>
       <div className={bodyStyles.body}>
         <div className={bodyStyles.column1}>
           <p>Był ostatnio zaobserwowany w Wietnamie</p>

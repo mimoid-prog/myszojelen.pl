@@ -1,0 +1,171 @@
+@import "./colors.scss";
+
+h2 span {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.animalsSources {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  .imageHolder {
+    width: 35vw;
+    height: 35vw;
+    margin-top: 14px;
+    background: $darkGray;
+  }
+
+  .image {
+    cursor: pointer;
+  }
+}
+
+.animalsTargets {
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+
+  .mobileEquation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobileEquationSecond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .target {
+    width: 28vw;
+    height: 28vw;
+    background: $darkGray;
+    position: relative;
+
+    .removeAnimal {
+      color: #d43131;
+      position: absolute;
+      top: -8px;
+      left: 8px;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .mathChar {
+    font-size: 3rem;
+  }
+
+  .submit {
+    font-size: 1.6rem;
+    background: $yellow;
+    color: $darkGray;
+    border: none;
+    width: 200px;
+    display: block;
+    margin-left: 20px;
+    outline: none;
+  }
+
+  .equationMessage {
+    margin-bottom: 14px;
+    font-size: 1.2rem;
+    color: #f74f4f;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 700px) {
+  .animalsSources {
+    flex-direction: row;
+
+    .imageHolder {
+      width: 20vw;
+      height: 20vw;
+    }
+  }
+
+  .animalsTargets {
+    .wholeEquation {
+      display: flex;
+      align-items: center;
+    }
+
+    .target {
+      width: 20vw;
+      height: 20vw;
+    }
+
+    .mathChar {
+      font-size: 6rem;
+      line-height: 0.8;
+    }
+
+    .submit {
+      background: transparent;
+      color: $orange;
+      font-size: 3.5rem;
+      cursor: pointer;
+      transition: all 0.1s ease;
+
+      &:hover {
+        color: $yellow;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .animalsSources {
+    justify-content: center;
+
+    .imageHolder {
+      width: 200px;
+      height: 200px;
+      margin-right: 14px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .animalsTargets {
+    margin-top: 25px;
+    margin-bottom: 60px;
+
+    .wholeEquation {
+      justify-content: center;
+    }
+
+    .target {
+      margin-right: 14px;
+      width: 200px;
+      height: 200px;
+
+      .removeAnimal {
+        font-size: 3rem;
+        left: auto;
+        right: 10px;
+        top: -14px;
+      }
+    }
+
+    .mathChar {
+      margin-right: 14px;
+    }
+
+    .equationMessage {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+  }
+}
