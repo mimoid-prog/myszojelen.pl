@@ -20,6 +20,7 @@ const Home = () => {
       <Header />
       <Body />
       <VideoSection />
+      <p className="contact">Kontakt: mimoid.prog@gmail.com</p>
     </Layout>
   )
 }
