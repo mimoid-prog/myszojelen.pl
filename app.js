@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(
   `mongodb://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}:${process.env.PORT}/${process.env.DBNAME}`,
-  { useNewUrlParser: true }
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 app.post("/api/createComment", (req, res) => {
