@@ -7,7 +7,7 @@ const port = 5000;
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 dotenv.config({
-  path: `../.env`,
+  path: `../.env.production`,
 });
 
 app.use(bodyParser.json());
