@@ -4,14 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 require("dotenv").config({
-  path: `../../.env.production`,
+  path: `../.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
   siteMetadata: {
     title: `myszojelen.pl - strona poświęcona cudownemu zwierzęciu o nazwie Myszojeleń`,
     siteUrl: `https://myszojelen.pl`,
-    description: `Naukowcy myśleli że wszystkie gatunek Myszojelenia już dawno wyginął. Byli jednak w błędzie, ponieważ Myszojelenie żyją!`,
+    description: `Naukowcy myśleli że gatunek Myszojelenia już dawno wyginął. Byli jednak w błędzie, ponieważ Myszojelenie żyją!`,
   },
   plugins: [
     "gatsby-plugin-sass",
