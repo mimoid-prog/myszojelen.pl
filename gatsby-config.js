@@ -3,7 +3,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-//"start": "npm run develop",
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
