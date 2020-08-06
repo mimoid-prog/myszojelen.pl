@@ -1,20 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const Comment = require("./models/Comment");
 const app = express();
+app.use(express.json());
 const port = 5000;
 
-const dotenv = require("dotenv");
-dotenv.config({
-  path: ".env.production",
+require("dotenv").config({
+  path: `.env.development`,
 });
 
-app.use(express.json());
+const Comment = require("./models/Comment");
 
 mongoose
   .connect(
     `mongodb://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}:${process.env.PORT}/${process.env.DBNAME}`,
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    { useNewUrlParser: true, useUnifiedTopology: true },
   )
   .then(() => {
     console.log("Connected to DB");
@@ -41,7 +40,7 @@ app.post("/api/createComment", (req, res) => {
       .save()
       .then(() => res.json({ message: "success" }))
       .catch((err) =>
-        res.status(400).json({ message: "Błąd dodawania komentarza" })
+        res.status(400).json({ message: "Błąd dodawania komentarza" }),
       );
   }
 });
