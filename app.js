@@ -6,16 +6,14 @@ const port = 5000;
 
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
-dotenv.config({
-  path: `.env.production`,
-});
+dotenv.config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(
   `mongodb://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}:${process.env.PORT}/${process.env.DBNAME}`,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
 app.post("/api/createComment", (req, res) => {
