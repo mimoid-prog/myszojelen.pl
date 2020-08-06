@@ -5,14 +5,23 @@ const app = express();
 const port = 5000;
 
 const dotenv = require("dotenv");
-dotenv.config();
+dotenv.config({
+  path: ".env.production",
+});
 
 app.use(express.json());
 
-mongoose.connect(
-  `mongodb://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}:${process.env.PORT}/${process.env.DBNAME}`,
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
+mongoose
+  .connect(
+    `mongodb://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}:${process.env.PORT}/${process.env.DBNAME}`,
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then(() => {
+    console.log("Connected to DB");
+  })
+  .catch(() => {
+    console.log("Failed DB");
+  });
 
 app.post("/api/createComment", (req, res) => {
   const nick = req.body.name;
