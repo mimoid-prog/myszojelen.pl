@@ -4,12 +4,10 @@ const Comment = require("./models/Comment");
 const app = express();
 const port = 5000;
 
-const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 dotenv.config();
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 
 mongoose.connect(
   `mongodb://${process.env.USER}:${process.env.PASSWORD}@${process.env.HOST}:${process.env.PORT}/${process.env.DBNAME}`,
