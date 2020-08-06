@@ -23,13 +23,17 @@ app.post("/api/createComment", (req, res) => {
     nick.length < 1 ||
     comment.length < 1
   ) {
-    res.status(400);
+    res
+      .status(400)
+      .json({ message: "Nick lub komentarz nie spełnia wymagań." });
   } else {
     const newComment = new Comment({ nick, comment, accepted: false });
     newComment
       .save()
       .then(() => res.json({ message: "success" }))
-      .catch((err) => res.status(400));
+      .catch((err) =>
+        res.status(400).json({ message: "Błąd dodawania komentarza" })
+      );
   }
 });
 
