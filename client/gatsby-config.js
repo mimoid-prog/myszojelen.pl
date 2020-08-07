@@ -26,15 +26,15 @@ module.exports = {
     {
       resolve: `gatsby-source-mongodb`,
       options: {
-        dbName: process.env.DBNAME,
+        dbName: process.env.DB_NAME,
         collection: "comments",
         server: {
-          address: process.env.HOST,
-          port: process.env.PORT,
+          address: process.env.DB_HOST,
+          port: process.env.DB_PORT,
         },
         auth: {
-          user: process.env.USER,
-          password: process.env.PASSWORD,
+          user: process.env.DB_USER,
+          password: process.env.DB_PASSWORD,
         },
       },
     },
